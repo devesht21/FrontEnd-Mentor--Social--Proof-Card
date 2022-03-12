@@ -65,6 +65,9 @@ main {
   border-radius: 8px;
   color: hsl(300, 43%, 22%);
   font-weight: 700;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .rating--reviews {
@@ -73,10 +76,6 @@ main {
 
 .rating--guru {
   transform: translateX(-3.6rem);
-}
-
-.icons {
-  margin-right: 2.4rem;
 }
 
 .testimonials {
@@ -137,10 +136,6 @@ main {
 }
 
 @media (max-width: 376px) {
-  html {
-    font-size: 50%;
-  }
-
   main {
     background-image: url(images/bg-pattern-top-mobile.svg),
       url(images/bg-pattern-bottom-mobile.svg);
@@ -148,13 +143,19 @@ main {
 
   .card {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .rating {
+    transform: translateX(0);
+    flex-direction: column;
+    gap: 0.7rem;
   }
 
   .testimonials {
     grid-column: span 1;
+    flex-direction: column;
   }
-
-  .heading {
-    text-align: center;
+  .testimonial {
+    transform: translateY(0);
   }
 }
