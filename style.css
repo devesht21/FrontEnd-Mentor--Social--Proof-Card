@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: hsl(303, 10%, 53%);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url(images/bg-pattern-top-desktop.svg),
+    url(images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  padding: 2.4rem;
+}
+
+.card {
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 22rem;
+  row-gap: 6.4rem;
+}
+
+.heading {
+  font-size: 4.4rem;
+  color: hsl(300, 43%, 22%);
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.sub-heading {
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin: 2.4rem 0;
+}
+
+.rating {
+  background-color: hsl(300, 24%, 96%);
+  padding: 1.8rem 2.4rem;
+  border-radius: 8px;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+}
+
+.rating--reviews {
+  transform: translateX(-7.2rem);
+}
+
+.rating--guru {
+  transform: translateX(-3.6rem);
+}
+
+.icons {
+  margin-right: 2.4rem;
+}
+
+.testimonials {
+  grid-column: span 2;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.testimonial {
+  background-color: hsl(300, 43%, 22%);
+  padding: 4.8rem 2.4rem;
+  border-radius: 9px;
+}
+
+.testimonial-irene {
+  transform: translateY(2.4rem);
+}
+
+.testimonial-anne {
+  transform: translateY(4.8rem);
+}
+
+.user-details {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+
+.testimonial-img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.user-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.user-name {
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.user-verified {
+  color: hsl(333, 80%, 67%);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.testimonial blockquote {
+  line-height: 1.6;
+  font-weight: 500;
+  color: hsl(300, 24%, 96%);
+}
+
+@media (max-width: 376px) {
+  html {
+    font-size: 50%;
+  }
+
+  main {
+    background-image: url(images/bg-pattern-top-mobile.svg),
+      url(images/bg-pattern-bottom-mobile.svg);
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-column: span 1;
+  }
+
+  .heading {
+    text-align: center;
+  }
+}
